@@ -7,15 +7,6 @@ import NCGStore, { replicate } from "../../stores/NodecgStore"
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
-import Scoreboard from './components/Scoreboard'
-import Timer from './components/Timer'
-
-interface TeamInfoRepTypes {
-  Team1Name: string
-  Team2Name: string
-  Team1Score: number
-  Team2Score: number
-}
 
 const app: FC = () => {
   const [repState, setRepState] = useState({
