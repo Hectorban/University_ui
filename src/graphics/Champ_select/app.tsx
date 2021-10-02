@@ -7,6 +7,7 @@ import NCGStore, { replicate } from "../../stores/NodecgStore"
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
+// import Scoreboard from './components/Scoreboard'
 
 const app: FC = () => {
   const [repState, setRepState] = useState({
@@ -44,15 +45,15 @@ const app: FC = () => {
     )
   }
 
+  if(!TeamInfoRep){return null}
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans, actions } = champSelect
+  const { myTeam, theirTeam, bans } = champSelect
   const { myTeamBans, theirTeamBans} = bans
-  console.log(actions)
 
   return (
     <div id="app">
       <div className="app-background">
-        <img className="background" src="https://i.imgur.com/j3NPtNr.png" alt="El fondo deberia estar aqui >:c"/>
+        <img className="background" src="https://www.dropbox.com/s/nzy3gdvb7gq17gj/SELECCION%20CAMPEONES%20LOL%20%281%29.png?raw=1" alt="El fondo deberia estar aqui >:c"/>
       </div> 
       <div className="app-container">
         <Team

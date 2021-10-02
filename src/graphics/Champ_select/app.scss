@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 256);
     margin: 0px auto;
     overflow: hidden;
 }
@@ -12,7 +12,7 @@ body {
 #app {
     @include fullscreen;
     display: grid;
-    grid-template-rows: 700px 380px;
+    grid-template-rows: 672px 408px;
     grid-template-columns: 1920px;
 }
 
@@ -37,19 +37,23 @@ body {
     z-index: 2;
     grid-row: 2;
     display: grid;
-    grid-template-rows: 50px 210px 75px 60px;
-    grid-template-columns: 275px 570px 225px 570px 275px;
+    grid-template-rows: 60px 10px 205px 135px;
+    grid-template-columns: 45px 750px 320px 753px 45px;
 
     .team-selection.-Blue, .team-selection.-Red {
         height: 100%;
-        grid-row: 2;
+        grid-row: 3;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        column-gap: 11px;
         .player-pick {
             height: 97%;
-            width: 97%;
+            width: 93%;
             overflow: hidden;
             justify-self: center;
+            position: relative;
+            top: 2px;
+            left: 1px;
             .player-pick-container {
                 height: 100%;
                 display: grid;
@@ -84,14 +88,14 @@ body {
     }
 
     .ban-selection.-Blue, .ban-selection.-Red {
-        grid-row: 3;
+        grid-row: 1;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
         .ban-pick {
-            width: 65px;
-            height: 65px;
+            width: 58px;
+            height: 58px;
             padding-left: 5px;
             overflow: hidden;
             .ban-pick-image {
@@ -104,18 +108,20 @@ body {
     .ban-selection.-Blue {
         grid-column: 2;
         flex-direction: row-reverse;
-        justify-content: end;
+        justify-content: start;
         padding-right: 10px;
+        column-gap: 6px;
     }
     .ban-selection.-Red {
         grid-column: 4;
-        justify-content: flex-start;
+        justify-content: end;
         flex-direction: row;
         padding-left: 10px;
+        column-gap: 6px;
     }
 
     .scoreboard {
-        grid-column: 2;
+        grid-column: 3;
         grid-row: 3;
         display: grid;
         grid-template-rows: 40% 25% 35%;
