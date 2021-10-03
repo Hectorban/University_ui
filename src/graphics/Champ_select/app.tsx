@@ -45,7 +45,6 @@ const app: FC = () => {
     )
   }
 
-  if(!TeamInfoRep){return null}
   const champSelect:ChampSelectType = champSelectUpdate
   const { myTeam, theirTeam, bans } = champSelect
   const { myTeamBans, theirTeamBans} = bans
