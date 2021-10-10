@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading'
 import { ChampSelectType } from 'src/types/champSelect'
 import NCGStore, { replicate } from "../../stores/NodecgStore"
 
-// import * as example from './util/CSExample.json'
+import * as example from './util/CSExample.json'
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
@@ -30,23 +30,9 @@ const app: FC = () => {
   const {
     replicants: { champSelectUpdate, TeamInfoRep }, // Used to take out a replicant from the replicants object
   } = repState || {}
-  
-  if(!champSelectUpdate || !TeamInfoRep) {
-    return (
-      <div className='loading-container'>
-        <ReactLoading
-          className='loading'
-          type="spinningBubbles" 
-          color="black" 
-          height={200} 
-          width={200} 
-        />
-      </div>
-    )
-  }
 
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans } = champSelect
+  const { myTeam, theirTeam, bans } = example
   const { myTeamBans, theirTeamBans} = bans
 
   return (
