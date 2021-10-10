@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading'
 import { ChampSelectType } from 'src/types/champSelect'
 import NCGStore, { replicate } from "../../stores/NodecgStore"
 
-import * as example from './util/CSExample.json'
+// import * as example from './util/CSExample.json'
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
@@ -32,7 +32,7 @@ const app: FC = () => {
   } = repState || {}
 
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans } = example
+  const { myTeam, theirTeam, bans } = champSelect
   const { myTeamBans, theirTeamBans} = bans
 
   return (
