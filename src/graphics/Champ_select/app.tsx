@@ -30,6 +30,7 @@ const app: FC = () => {
   const {
     replicants: { champSelectUpdate, TeamInfoRep }, // Used to take out a replicant from the replicants object
   } = repState || {}
+  if (!champSelectUpdate) return null
 
   const champSelect:ChampSelectType = champSelectUpdate
   const { myTeam, theirTeam, bans } = champSelect
