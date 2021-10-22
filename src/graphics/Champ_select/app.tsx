@@ -30,16 +30,17 @@ const app: FC = () => {
   const {
     replicants: { champSelectUpdate, TeamInfoRep }, // Used to take out a replicant from the replicants object
   } = repState || {}
-  if (!champSelectUpdate) return null
+  
+  if(!champSelectUpdate) return null
 
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans } = champSelect
+  const { myTeam, theirTeam, bans } = champSelect 
   const { myTeamBans, theirTeamBans} = bans
 
   return (
     <div id="app">
       <div className="app-background">
-        <img className="background" src="https://www.dropbox.com/s/nzy3gdvb7gq17gj/SELECCION%20CAMPEONES%20LOL%20%281%29.png?raw=1" alt="El fondo deberia estar aqui >:c"/>
+        <img className="background" src="https://i.imgur.com/nCv4uYe.png" alt="El fondo deberia estar aqui >:c"/>
       </div> 
       <div className="app-container">
         <Team
