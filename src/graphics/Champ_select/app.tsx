@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading'
 import { ChampSelectType } from 'src/types/champSelect'
 import NCGStore, { replicate } from "../../stores/NodecgStore"
 
-// import * as example from './util/CSExample.json'
+import * as example from './util/CSExample.json'
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
@@ -34,11 +34,14 @@ const app: FC = () => {
   if(!champSelectUpdate) return null
 
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans } = champSelect 
+  const { myTeam, theirTeam, bans } = example
   const { myTeamBans, theirTeamBans} = bans
 
   return (
     <div id="app">
+      <video className='app-background' autoPlay muted loop> 
+        <source src='https://www.dropbox.com/s/32jfnog6lp41zp6/Back%20Final.webm?raw=1' type='video/webm'/>
+      </video> 
       <div className="app-background">
         <img className="background" src="https://i.imgur.com/nCv4uYe.png" alt="El fondo deberia estar aqui >:c"/>
       </div> 
