@@ -87,4 +87,3 @@ export interface Trade {
     id:     number;
     state:  string;
 }
-

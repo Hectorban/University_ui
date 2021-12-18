@@ -7,6 +7,7 @@ import * as example from './util/CSExample.json'
 import './app.scss'
 import Team from './components/Team'
 import Ban from './components/Ban'
+import Timer from './components/Timer'
 // import Scoreboard from './components/Scoreboard'
 
 const app: FC = () => {
@@ -34,7 +35,7 @@ const app: FC = () => {
   if(!champSelectUpdate) return null
 
   const champSelect:ChampSelectType = champSelectUpdate
-  const { myTeam, theirTeam, bans } = example
+  const { myTeam, theirTeam, bans, actions, timer } = champSelect 
   const { myTeamBans, theirTeamBans} = bans
 
   return (
@@ -65,6 +66,10 @@ const app: FC = () => {
           key={4}
           side='Red'
           data={theirTeamBans}
+        />
+        <Timer
+          actions={actions}
+          timer={timer}
         />
       </div>
     </div>
