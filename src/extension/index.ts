@@ -19,6 +19,4 @@ async function init() {
 	
 	// Modules
 	require("./ddragonfetch")
-	require("./champselect")
-	require("./summonerNames")
 }

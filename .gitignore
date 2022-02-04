@@ -79,3 +79,5 @@ typings/
 /dashboard
 /extension
 /graphics
+package-lock.json
+yarn.lock
