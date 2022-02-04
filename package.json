@@ -27,6 +27,23 @@
     "nodecg-bundle"
   ],
   "nodecg": {
+    "assetCategories": [
+      {
+        "name": "pantallas",
+        "title": "Pantallas",
+        "allowedTypes": ["jpg", "jpeg", "gif", "webm", "png"]
+      },
+      {
+        "name": "thumbnails",
+        "title": "Thumbnails",
+        "allowedTypes": ["jpg", "jpeg", "gif", "webm", "png"]
+      },
+      {
+        "name": "fondos",
+        "title": "Fondos",
+        "allowedTypes": ["jpg", "jpeg", "gif", "webm", "png"]
+      }
+    ],
     "compatibleRange": "^1.1.1",
     "dashboardPanels": [
       {
