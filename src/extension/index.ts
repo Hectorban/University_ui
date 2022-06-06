@@ -17,6 +17,7 @@ async function init() {
 	const nodecg = nodecgApiContext.get()
 	nodecg.log.info("Initializing league of legends ui backend...")
 	
-	// Modules
+	// Modules	
 	require("./ddragonfetch")
+	require("./champselect")
 }

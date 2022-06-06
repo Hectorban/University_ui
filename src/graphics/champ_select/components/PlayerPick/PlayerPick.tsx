@@ -1,4 +1,5 @@
-import React, { ReactElement, useState, useEffect, FC } from 'react';
+import React, { ReactElement, useState, useEffect, FC, useContext } from 'react';
+import summonerNamectx from '../../util/summonerNamesCtx'
 
 interface Props {
     champName: string
@@ -13,16 +14,10 @@ const PlayerPick:FC<Props> = ({champName, spell1Name, spell2Name, team, summoner
     const spell1Image = `http://ddragon.leagueoflegends.com/cdn/11.6.1/img/spell/Summoner${spell1Name}.png`;
     const spell2Image = `http://ddragon.leagueoflegends.com/cdn/11.6.1/img/spell/Summoner${spell2Name}.png`;
     const teamColor = team===1 ? 'rgb(155, 209, 5)' : 'rgb(221, 0, 121)'
-    const [summonerName, setsummonerName] = useState(null)
-    useEffect(() => {
-        const fetchSummonerName = async () => {
-            const response = await nodecg.sendMessage('summonerName', summonerId)
-            setsummonerName(response)
-        };
-        fetchSummonerName()
-    }, [])
-    console.log(team)
+    const summonerNameInfo = useContext(summonerNamectx)
+    const summonerName = summonerNameInfo[summonerId]
     const summTrigger = false
+
     return (
         <div className='player-pick'>
             {summonerName ? (
