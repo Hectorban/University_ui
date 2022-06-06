@@ -44,7 +44,7 @@ const app: FC = () => {
         <source src='https://www.dropbox.com/s/rl35zbi4ea0rj1e/LOL.webm?raw=1' type='video/webm'/>
       </video> 
       <div className="app-background">
-        <img className="background" src="https://i.imgur.com/nCv4uYe.png" alt="El fondo deberia estar aqui >:c"/>
+        <img className="background" src="https://i.imgur.com/IndAbzb.png" alt="El fondo deberia estar aqui >:c"/>
       </div> 
         <div className="app-container">
         <SummonerNameProvider value = {summonerName}>
